@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubham Yadav - Portfolio</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+#skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  background: #00aaff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.project {
+  background: white;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #00aaff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0088cc;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #skills ul {
+    flex-direction: column;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Shubham Yadav</h1>
+    <p>BCA Student | Web Developer | Programmer</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="shubham.jpg" alt="Shubham Yadav" class="profile">
+    <p>Hello! I am Shubham Yadav, a passionate web developer currently pursuing BCA. Skilled in HTML, CSS, JavaScript, Python, and MySQL.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>MySQL</li>
+      <li>W3.CSS</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Calculator</h3>
+      <p>A simple calculator using HTML, CSS, and JavaScript.</p>
+      <a href="Calculator.html" class="btn">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Landing Page</h3>
+      <p>A responsive landing page created with HTML and CSS.</p>
+      <a href="Landingpage.html" class="btn">View Project</a>
+    </div>
+    <div class="project">
+      <h3>PortFolio</h3>
+      <p>A personal portfolio website created with HTML and CSS.</p>
+      <a href="PortFolio.html" class="btn">View Project</a>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: subhamyadav9538@gmail.com</p>
+    <p>Phone: 3278657891</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Shubham Yadav | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
