@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple - Calculator</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            background: #f2f2f2;
+            font-family: Arial, sans-serif; 
+        }
+        .Calculator{
+            background-color: aqua;
+            width:fit-content;
+            height:fit-content;
+            padding:20px;
+            text-align: center;
+        }
+        button{
+            border-radius:10px;
+            height:80px;
+            width:90px;
+            margin:5px 5px 5px 5px;
+            font-size: xx-large;
+            cursor:pointer;
+        }
+        #display{
+            height:80px;
+            width:390px;
+            border:5px solid grey;
+            border-radius:10px;
+            margin-bottom:10px;
+            text-align:right;
+            font-size: xx-large;
+        }      
+        @media (max-width:768px) {
+            body{
+                background-color:rgb(229, 241, 234);
+            }
+            button{
+                height:40px;
+                width:50px;
+                font-size: x-large;
+            }
+            #display{
+                height:50px;
+                width:240px;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="Calculator">
+        <input type="text" id="display" >
+        <div class="buttons">
+        <button onclick="deletLast()">X</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="btnValue('%')">%</button>
+        <button onclick="btnValue('/')">/</button>
+            <br>
+        <button onclick="btnValue('9')">9</button>
+        <button onclick="btnValue('8')">8</button>
+        <button onclick="btnValue('7')">7</button>
+        <button onclick="btnValue('*')">*</button>
+        <br>
+        <button onclick="btnValue('6')">6</button>
+        <button onclick="btnValue('5')">5</button>
+        <button onclick="btnValue('4')">4</button>
+        <button onclick="btnValue('-')">-</button>
+        <br>
+        <button onclick="btnValue('3')">3</button> 
+        <button onclick="btnValue('2')">2</button>
+        <button onclick="btnValue('1')">1</button>
+        <button onclick="btnValue('+')">+</button>
+        <br>
+        <button onclick="btnValue('00')">00</button>
+        <button onclick="btnValue('0')">0</button>
+        <button onclick="btnValue('.')">.</button>
+        <button onclick="calculat()">=</button>
+    </div>
+    </div>
+    <script>
+        let display=document.getElementById("display")
+        function clearDisplay(){
+            display.value= "";
+        }
+        function deletLast(){
+            display.value=display.value.slice(0,-1);
+        }
+        function btnValue(value){
+            display.value += value;
+        }
+        function calculat(){
+            try{
+            display.value = eval(display.value);
+        }catch(Error){
+            display.value="Error";
+        }
+    }
+    </script>
+</body>
+</html>
